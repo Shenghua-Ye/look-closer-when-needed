@@ -1,0 +1,16 @@
+torch==2.5.1
+transformers==4.47.0
+huggingface_hub==0.36.2
+numpy==1.26.4
+scipy==1.15.3
+scikit-learn==1.7.2
+threadpoolctl==3.6.0  # also a scikit-learn dependency; imported directly by exp/exp_frontier.py
+matplotlib==3.10.8  # figures in paper_results.ipynb
+pillow==12.1.0
+pyarrow==23.0.0  # data preparation only (data_provider/)
+sentencepiece==0.2.2  # tokenizer loading
+protobuf==7.36.2  # tokenizer loading
+accelerate==1.15.0
+pandas==2.2.3  # paper_results.ipynb
+nbconvert==7.16.6  # runs paper_results.ipynb from the command line
+ipykernel==6.29.5

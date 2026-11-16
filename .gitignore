@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+# downloaded by scripts/run.sh prepare (datasets keep their own licenses; model weights come from the Hugging Face hub)
+data/*
+!data/manifests/
+!data/manifests_pope/
+# run logs
+logs/
+# outputs of the pipeline (scripts/run.sh)
+results/

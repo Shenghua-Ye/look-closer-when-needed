@@ -1,0 +1,25 @@
+# Conda environment of the final study (PyTorch CUDA 12.4 wheels).
+# conda env create -f environment.yml && conda activate cs707
+name: cs707
+channels: [conda-forge]
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu124
+      - torch==2.5.1
+      - transformers==4.47.0
+      - huggingface_hub==0.36.2
+      - accelerate==1.15.0
+      - sentencepiece==0.2.2
+      - protobuf==7.36.2
+      - numpy==1.26.4
+      - scipy==1.15.3
+      - scikit-learn==1.7.2
+      - threadpoolctl==3.6.0
+      - matplotlib==3.10.8
+      - pandas==2.2.3
+      - nbconvert==7.16.6
+      - ipykernel==6.29.5
+      - pillow==12.1.0
+      - pyarrow==23.0.0

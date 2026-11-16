@@ -1,0 +1,16 @@
+# Final study configuration (documentation of the constants the code uses; the code is the source of truth).
+model: {id: llava-hf/llava-v1.6-vicuna-7b-hf, revision: c916e6cdcd760b4cecd1dd4907f84ac649f93b23, dtype: float16,
+        attn: sdpa, batch_size: 1, greedy: true, max_new_tokens: 32}
+paths:
+  cheap: base view only, 336x336 bicubic, 577 visual tokens (models/llava_next.py)
+  full: native AnyRes, 1,416-2,928 visual tokens
+  fallback: resume from the shared prefix (text prefix + 576 base-view patches), crops + question prefilled, draft verified
+datasets:
+  sugarcrepe: {groups: [replace, add_remove, reorder, other], signal: A/B log-prob margin, alpha: 0.05}
+  textvqa: {groups: [reading, counting, existence, attribute, relation, other], signal: min token margin over the answer, alpha: 0.10}
+calibration: {method: Learn-then-Test, test: exact binomial, within_group: fixed sequence over the DEV candidate thresholds,
+              across_groups: Bonferroni over eligible groups, delta: 0.10, alphas_sensitivity: [0.05, 0.10, 0.20]}
+splits: {unit: image, dev_cal_test: [0.4, 0.3, 0.3], rounds: 5, round0: manifest split, seeds: {manifest: 20261001,
+         rounds: 20261101, cal_sample: 20261102, test_sample: 20261103, f1_order: 20261104, f1_path_order: 20261105,
+         bootstrap_replay: 20261106, timing_order_and_bootstrap: 20261107, human_eval_sample: 20261108}}
+timing: {arms: [full, restart, resume], repeats: 3, statistic: per-request median, bootstrap: 2000 image-cluster resamples}

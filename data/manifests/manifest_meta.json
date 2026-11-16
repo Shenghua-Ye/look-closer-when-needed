@@ -1,0 +1,78 @@
+{
+ "rules_version": "edit-signature-v1",
+ "token_regex": "[a-z0-9]+(?:'[a-z]+)?",
+ "split_seed": 20261001,
+ "ab_seed": 0,
+ "split_rule": "DEV u<0.4, CAL 0.4<=u<0.7, TEST u>=0.7; pilot_dev = u<0.3",
+ "source_md5": {
+  "replace_obj": "eb5268471ca481d268165841f41e7e55",
+  "replace_att": "15b90617dbdc54609ca4481f7a52d7b3",
+  "replace_rel": "4cd56b43c6d57bcccb0be43de47bf72b",
+  "swap_obj": "45b3a3b54358d7a4ba2c7bcda4e294e7",
+  "swap_att": "3f176d4fff9d02c985d35bc6a389cdb9",
+  "add_obj": "f0eb153e985391d6970b533c23d036cc",
+  "add_att": "3ade4c82e75e17bca41ef3506da5fd78"
+ },
+ "duplicate_images": {},
+ "n_questions": 7511,
+ "n_images": 1560,
+ "images_per_split": {
+  "CAL": 483,
+  "DEV": 622,
+  "TEST": 455
+ },
+ "pilot_dev_images": 478,
+ "questions_per_split": {
+  "CAL": 2252,
+  "DEV": 2991,
+  "TEST": 2268
+ },
+ "pilot_dev_questions": 2322,
+ "group_images_per_split": {
+  "replace": {
+   "CAL": 317,
+   "DEV": 429,
+   "TEST": 316
+  },
+  "add_remove": {
+   "CAL": 282,
+   "DEV": 373,
+   "TEST": 283
+  },
+  "reorder": {
+   "CAL": 154,
+   "DEV": 205,
+   "TEST": 153
+  },
+  "other": {
+   "CAL": 264,
+   "DEV": 350,
+   "TEST": 256
+  }
+ },
+ "category_by_group": {
+  "add_att|add_remove": 600,
+  "add_att|other": 84,
+  "add_att|replace": 8,
+  "add_obj|add_remove": 1593,
+  "add_obj|other": 424,
+  "add_obj|replace": 45,
+  "replace_att|add_remove": 4,
+  "replace_att|other": 133,
+  "replace_att|replace": 651,
+  "replace_obj|add_remove": 1,
+  "replace_obj|other": 441,
+  "replace_obj|replace": 1210,
+  "replace_rel|add_remove": 9,
+  "replace_rel|other": 681,
+  "replace_rel|replace": 716,
+  "swap_att|add_remove": 33,
+  "swap_att|other": 64,
+  "swap_att|reorder": 408,
+  "swap_att|replace": 161,
+  "swap_obj|add_remove": 13,
+  "swap_obj|other": 10,
+  "swap_obj|reorder": 164,
+  "swap_obj|replace": 58
+ }
+}

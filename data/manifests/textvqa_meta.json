@@ -1,0 +1,88 @@
+{
+ "rules_version": "qtype-v1",
+ "rules": {
+  "reading": [
+   "\\b(read|reads|written|text|word|words|letter|letters)\\b",
+   "\\bwhat does\\b.*\\bsay\\b",
+   "\\bwhat number\\b.*\\bon\\b"
+  ],
+  "counting": [
+   "\\bhow many\\b",
+   "\\bnumber of\\b"
+  ],
+  "existence": [
+   "\\bis there\\b",
+   "\\bare there\\b",
+   "\\bcan you see\\b"
+  ],
+  "attribute": [
+   "\\b(what|which)\\b.*\\b(color|colour|material|shape)\\b"
+  ],
+  "relation": [
+   "\\bwhere\\b",
+   "\\bleft of\\b",
+   "\\bright of\\b",
+   "\\babove\\b",
+   "\\bbelow\\b",
+   "\\bbehind\\b",
+   "\\bin front of\\b",
+   "\\bnext to\\b"
+  ]
+ },
+ "split_stream": "default_rng([20261001, 2])",
+ "n_questions": 5000,
+ "n_images": 3166,
+ "cross_source_duplicates": [],
+ "images_per_split": {
+  "CAL": 945,
+  "DEV": 1234,
+  "TEST": 987
+ },
+ "questions_per_split": {
+  "CAL": 1476,
+  "DEV": 1935,
+  "TEST": 1589
+ },
+ "pilot_dev_images": 930,
+ "pilot_dev_questions": 1466,
+ "qtype_all": {
+  "attribute": 32,
+  "counting": 158,
+  "existence": 32,
+  "other": 3793,
+  "reading": 833,
+  "relation": 152
+ },
+ "qtype_images_per_split": {
+  "reading": {
+   "CAL": 241,
+   "DEV": 269,
+   "TEST": 233
+  },
+  "counting": {
+   "CAL": 43,
+   "DEV": 57,
+   "TEST": 54
+  },
+  "existence": {
+   "CAL": 12,
+   "DEV": 13,
+   "TEST": 7
+  },
+  "attribute": {
+   "CAL": 13,
+   "DEV": 14,
+   "TEST": 5
+  },
+  "relation": {
+   "CAL": 37,
+   "DEV": 58,
+   "TEST": 53
+  },
+  "other": {
+   "CAL": 792,
+   "DEV": 1058,
+   "TEST": 840
+  }
+ }
+}
